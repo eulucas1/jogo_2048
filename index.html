@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jogo 2048</title>
+</head>
+
+<body>
+
+    <div class="pontuacao-container">
+        <div>Pontuação: <span id="pontuacao-atual">0</span></div>
+        <div>Seu recorde: <span id="pontuacao-recorde">0</span></div>
+    </div>
+
+    <div class="jogo-container">
+        <div class="grid">
+            <div class="quadrado" data-row="0" data-col="0"></div>
+            <div class="quadrado" data-row="0" data-col="1"></div>
+            <div class="quadrado" data-row="0" data-col="2"></div>
+            <div class="quadrado" data-row="0" data-col="3"></div>
+            <div class="quadrado" data-row="1" data-col="0"></div>
+            <div class="quadrado" data-row="1" data-col="1"></div>
+            <div class="quadrado" data-row="1" data-col="2"></div>
+            <div class="quadrado" data-row="1" data-col="3"></div>
+            <div class="quadrado" data-row="2" data-col="0"></div>
+            <div class="quadrado" data-row="2" data-col="1"></div>
+            <div class="quadrado" data-row="2" data-col="2"></div>
+            <div class="quadrado" data-row="2" data-col="3"></div>
+            <div class="quadrado" data-row="3" data-col="0"></div>
+            <div class="quadrado" data-row="3" data-col="1"></div>
+            <div class="quadrado" data-row="3" data-col="2"></div>
+            <div class="quadrado" data-row="3" data-col="3"></div>
+        </div>
+    </div>
+
+    <div id="fim-de-jogo">
+        Fim de Jogo!
+        <button id="reiniciar-btn">Reiniciar Jogo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

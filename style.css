@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(to right, #EBF3E8, #D2E3C8);
+}
+
+.jogo-container{
+   width: 320px;
+   height: 320px;
+   border: 1px solid #ccc;
+   overflow: hidden;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.quadrado{
+    width: 77px;
+    height: 77px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #000;
+}
+
+.pontuacao-container{
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.quadrado[data-value="2"]{
+    background-color: #FF487E;
+}
+
+.quadrado[data-value="4"]{
+    background-color: #DEFCF9;
+}
+
+.quadrado[data-value="8"]{
+    background-color: #FC8A15;
+}
+
+.quadrado[data-value="16"]{
+    background-color: #E8B844;
+}
+
+.quadrado[data-value="32"]{
+    background-color: #FF6107;
+}
+
+.quadrado[data-value="64"]{
+    background-color: #D1E9EA;
+}
+
+.quadrado[data-value="128"]{
+    background-color: #F1C93B;
+}
+
+.quadrado[data-value="256"]{
+    background-color: #1EE494;
+}
+
+.quadrado[data-value="512"]{
+    background-color: #FF2E63;
+}
+
+.quadrado[data-value="1024"]{
+    background-color: #745C97;
+}
+
+.quadrado[data-value="2048"]{
+    background-color: #1A5D1A;
+}
+
+.quadrado[data-value="4096"]{
+    background-color: #F6F6F6;
+}
+
+#reiniciar-btn{
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #f4f4f4;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#fim-de-jogo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-quadrado[data-value]{
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.new-tile{
+    animation: appear 0.3s;
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
